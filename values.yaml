@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: emilevauge/whoami
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
@@ -20,7 +20,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - chart-example.local
+    - whoami.localhost
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
